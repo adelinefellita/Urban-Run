@@ -1,0 +1,225 @@
+#app {
+    font-family: "Montserrat", serif;
+    color: #243642;
+}
+
+/* Untuk warna default link */
+.nav-link {
+    color: #243642;
+    /* Warna teks */
+    text-decoration: none;
+    /* Menghilangkan garis bawah default */
+    position: relative;
+    /* Untuk menempatkan garis bawah */
+}
+
+/* Ketika link sedang di-hover */
+.nav-link:hover {
+    color: #243642;
+    /* Tetap warna teks yang sama ketika hover */
+}
+
+/* Untuk link yang aktif */
+.router-link-exact-active {
+    font-weight: bold;
+    /* Menebalkan teks saat aktif */
+    border-bottom: 2px solid #243642;
+    /* Garis bawah saat aktif */
+    padding-bottom: 5px;
+    /* Memberi jarak antara teks dan garis bawah */
+}
+
+/* Ketika hover, hanya menambahkan garis bawah tanpa mengubah warna teks */
+.nav-link:hover::after {
+    content: '';
+    /* Membuat pseudo-element untuk garis bawah */
+    position: absolute;
+    bottom: 0;
+    /* Menempatkan garis bawah di bawah teks */
+    left: 0;
+    width: 100%;
+    /* Lebar garis bawah sama dengan lebar link */
+    border-bottom: 2px solid #243642;
+    /* Garis bawah */
+}
+
+/* Menjaga garis bawah tetap ada saat aktif dan hover pada saat yang bersamaan */
+.nav-link.router-link-exact-active::after {
+    content: '';
+    /* Membuat pseudo-element untuk garis bawah */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid #243642;
+    /* Tetap garis bawah aktif */
+}
+
+
+.navbar-brand {
+    font-family: "Noto Serif", serif;
+    font-weight: bold;
+    color: #387478 !important;
+    font-size: 1.75rem !important;
+}
+
+.navbar-brand span {
+    font-style: italic;
+    font-size: 1.75rem;
+    color: #629584;
+}
+
+.nav-link {
+    color: #243642 !important;
+}
+
+.nav-link:hover {
+    color: #629584 !important;
+    font-weight: 500;
+    /* Warna ketika link di-hover */
+}
+
+.badge.bg-custom {
+    background-color: #387478;
+    /* Mengubah warna pop-up menjadi #387478 */
+    font-size: 0.75rem;
+    /* Menyesuaikan ukuran angka */
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0.1rem;
+    /* Menyesuaikan posisi pop-up sedikit lebih tinggi */
+    right: 0.1rem;
+    /* Menyesuaikan posisi pop-up sedikit lebih kanan */
+}
+
+.btn-success {
+    background-color: #EB5B00 !important;
+    border: none !important;
+}
+
+.btn-custom {
+    background-color: #EB5B00 !important;
+    /* Warna latar tombol */
+    border: none;
+    /* Warna border tombol */
+    color: white !important;
+    /* Warna teks tombol */
+}
+
+.custom-badge {
+    background-color: #EB5B00 !important;
+}
+
+.card-link {
+    text-decoration: none;
+    /* Menghilangkan underline dari link */
+}
+
+.card-product {
+    display: flex;
+    /* Flexbox untuk memastikan card mempunyai tinggi yang sama */
+    flex-direction: column;
+    /* Mengatur elemen di dalam card secara vertikal */
+    height: 100%;
+    /* Menyusun tinggi card agar sama */
+    border-radius: 30px !important;
+    /* Menambahkan border radius */
+    border: none !important;
+    /* Menghilangkan garis pinggir */
+    overflow: hidden;
+    /* Menghindari overflow pada card */
+}
+
+.zoom-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-effect:hover {
+    transform: scale(1.1);
+    /* Zoom in saat hover */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 30px !important;
+    border: none !important;
+}
+
+.card-body {
+    flex-grow: 1;
+    /* Memastikan bagian body card mengisi ruang kosong */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Menyusun konten secara merata di dalam card */
+}
+
+.card-title {
+    font-size: 1rem;
+}
+
+.card-img-top {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 100%;
+    height: 400px;
+    /* Atur tinggi gambar sesuai kebutuhan */
+    object-fit: cover;
+    /* Memastikan gambar proporsional */
+}
+
+.breadcrumb-item {
+    color: #243642 !important;
+}
+
+.breadcrumb-item.active {
+    font-weight: 500;
+}
+
+.katalog-detail {
+    margin-top: 30px;
+}
+
+.carousel-item img {
+    height: 400px;
+    /* Set height untuk gambar carousel */
+    object-fit: cover;
+    /* Menjaga agar gambar tidak terdistorsi */
+}
+
+button.carousel-control-prev,
+button.carousel-control-next {
+    filter: invert(1);
+    /* Agar tombol kontrol lebih terlihat di gambar gelap */
+}
+
+h4,
+h5 {
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+select.form-select {
+    width: 100px;
+}
+
+button {
+    margin-top: 20px;
+}

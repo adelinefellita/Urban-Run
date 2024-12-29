@@ -1,0 +1,70 @@
+{
+    "men-shoes": [{
+            "id": 1,
+            "code": "M-01",
+            "name": "Reebok Floatride Energy 6 Men Running Shoes - Moon",
+            "price": "1.079.400,00",
+            "images": ["Reebok_Floatride1.png", "Reebok_Floatride2.png", "Reebok_Floatride3.png"],
+            "sizes": [39, 40, 41, 42, 43]
+        },
+        {
+            "id": 2,
+            "code": "M-02",
+            "name": "Reebok Zig Dynamica Str Men's Running Shoes - White",
+            "price": "1.099.000,00",
+            "images": ["Reebok_Zig_Men1.png", "Reebok_Zig_Men2.png", "Reebok_Zig_Men3.png"],
+            "sizes": [40, 41, 42, 43, 44]
+        },
+        {
+            "id": 3,
+            "code": "M-03",
+            "name": "Reebok Lite Plus 4 Men's Running Shoes - Grey",
+            "price": "629.300,00",
+            "images": ["Reebok_Lite1.png", "Reebok_Lite2.png", "Reebok_Lite3.png"],
+            "sizes": [39, 40, 41, 42, 43, 44]
+        },
+        {
+            "id": 4,
+            "code": "M-03",
+            "name": "Reebok Floatzig 1 Men Running Shoes - White",
+            "price": "2.099.000,00",
+            "images": ["Reebok_Floatzig1.png", "Reebok_Floatzig2.png", "Reebok_Floatzig3.png"],
+            "sizes": [39, 40, 41, 42, 43, 44]
+        }
+    ],
+    "women-shoes": [{
+            "id": 1,
+            "code": "W-01",
+            "name": "Reebok Energen Run 4 Women's Running Shoes - Grey",
+            "price": "1.199.000,00",
+            "images": ["Reebok_Energen1.png", "Reebok_Energen2.png", "Reebok_Energen3.png"],
+            "sizes": [36, 37, 38, 39, 40]
+        },
+        {
+            "id": 2,
+            "code": "W-02",
+            "name": "Reebok Cityride Women's Running Shoes - Purple",
+            "price": "1.099.000,00",
+            "images": ["Reebok_Cityride1.png", "Reebok_Cityride2.png", "Reebok_Cityride3.png"],
+            "sizes": [35, 36, 37, 38, 39]
+        },
+        {
+            "id": 3,
+            "code": "W-03",
+            "name": "Reebok Zig Dynamica Str Women's Running Shoes - White",
+            "price": "1.099.000,00",
+            "images": ["Reebok_Zig1.png", "Reebok_Zig2.png", "Reebok_Zig3.png"],
+            "sizes": [36, 37, 38, 39, 40]
+        },
+        {
+            "id": 4,
+            "code": "W-04",
+            "name": "Reebok Zig Dynamica Str Women's Running Shoes - White",
+            "price": "1.099.000,00",
+            "images": ["Reebok_Zig1.png", "Reebok_Zig2.png", "Reebok_Zig3.png"],
+            "sizes": [36, 37, 38, 39, 40]
+        }
+    ],
+    "carts": [],
+    "orders": []
+}
