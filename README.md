@@ -31,4 +31,4 @@ npm install
 npm run serve
 ```
 
-### The project should now be running at http://localhost:8080 in your browser.
+#### The project should now be running at http://localhost:8080 in your browser.
