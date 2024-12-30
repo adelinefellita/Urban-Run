@@ -32,3 +32,5 @@ npm run serve
 ```
 
 #### The project should now be running at http://localhost:8080 in your browser.
+
+(assets/thumbnail.png)
