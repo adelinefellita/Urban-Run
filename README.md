@@ -33,4 +33,4 @@ npm run serve
 
 #### The project should now be running at http://localhost:8080 in your browser.
 
-(assets/thumbnail.png)
+![Portofolio - Adeline Fellita Marwa (1)](https://github.com/user-attachments/assets/05ad8520-786a-4eb3-b879-9bf2f1152e44)
