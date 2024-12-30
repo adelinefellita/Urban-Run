@@ -4,12 +4,15 @@ import {
 import App from './App.vue'
 import router from './router'
 
-// import { BootstrapVueIcons } from 'bootstrap-vue';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
+// Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.css'
 
-// icon bootstrap
-import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css';
+// Jika menggunakan BootstrapVue, pastikan juga mengimpor ini
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// Import ikon Bootstrap Vue (jika diperlukan)
+import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
 
 
+// Membuat aplikasi Vue dan menghubungkannya dengan router
 createApp(App).use(router).mount('#app')

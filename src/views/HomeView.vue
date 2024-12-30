@@ -3,15 +3,7 @@
     <AppNavbar />
     <div class="container">
       <AppHero />
-      <div class="row mt-4">
-        <div class="col">
-          <h2>Best <strong>Foods</strong></h2>
-        </div>
-        <div class="col">
-          <router-link to="/foods" class="btn btn-success float-right"><i class="bi bi-eye me-1"></i>Lihat
-            Semua</router-link>
-        </div>
-      </div>
+
       <div class="row mb-4">
         <div class="col-md-4 mt-4" v-for="product in products" :key="product.id">
           <CardProduct :product="product" />

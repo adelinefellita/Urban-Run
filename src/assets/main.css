@@ -11,6 +11,17 @@
     /* Menghilangkan garis bawah default */
     position: relative;
     /* Untuk menempatkan garis bawah */
+    border: none !important;
+    /* Pastikan border hilang */
+    outline: none !important;
+    /* Pastikan outline hilang */
+    background: none !important;
+    /* Menghapus background ketika fokus */
+}
+
+/* tiba tiba di navbar itemnya suka ada kotak gitu jadi pake ini aja buat ilangin kotak nya */
+.nav-item {
+    background-color: transparent;
 }
 
 /* Ketika link sedang di-hover */
@@ -19,9 +30,29 @@
     /* Tetap warna teks yang sama ketika hover */
 }
 
+/* Menghapus border dan outline pada link dan ikon tas */
+.nav-link,
+.bi-bag-fill {
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+    /* Menghapus background ketika fokus */
+    box-shadow: none !important;
+    /* Menghapus efek bayangan pada badge */
+}
+
+/* Menghapus background saat hover atau fokus */
+.nav-link:focus,
+.nav-link:hover {
+    background: none !important;
+}
+
+
+
 /* Untuk link yang aktif */
 .router-link-exact-active {
-    font-weight: bold;
+    color: #387478;
+    font-weight: reguler;
     /* Menebalkan teks saat aktif */
     border-bottom: 2px solid #243642;
     /* Garis bawah saat aktif */
@@ -61,12 +92,21 @@
     font-weight: bold;
     color: #387478 !important;
     font-size: 1.75rem !important;
+    margin-top: 10px;
+}
+
+.navbar-brand.active {
+    text-decoration: none !important;
 }
 
 .navbar-brand span {
     font-style: italic;
     font-size: 1.75rem;
     color: #629584;
+}
+
+.router-link-exact-active.navbar-brand {
+    border-bottom: transparent;
 }
 
 .nav-link {
@@ -93,6 +133,10 @@
     /* Menyesuaikan posisi pop-up sedikit lebih tinggi */
     right: 0.1rem;
     /* Menyesuaikan posisi pop-up sedikit lebih kanan */
+    border: none !important;
+    background-color: #387478 !important;
+    box-shadow: none !important;
+    /* Menghapus efek bayangan pada badge */
 }
 
 .btn-success {
@@ -116,6 +160,27 @@
 .card-link {
     text-decoration: none;
     /* Menghilangkan underline dari link */
+}
+
+.nav-link-card {
+    text-decoration: none;
+}
+
+.nav-link-card:hover {
+    text-decoration: none;
+}
+
+.nav-link-card:hover::after {
+    content: '';
+    /* Membuat pseudo-element untuk garis bawah */
+    position: absolute;
+    bottom: 0;
+    /* Menempatkan garis bawah di bawah teks */
+    left: 0;
+    width: 100%;
+    /* Lebar garis bawah sama dengan lebar link */
+    border-bottom: transparent;
+    /* Garis bawah */
 }
 
 .card-product {
@@ -150,6 +215,10 @@
     border: none !important;
 }
 
+.nav-link .card:hover {
+    border-bottom: transparent;
+}
+
 .card-body {
     flex-grow: 1;
     /* Memastikan bagian body card mengisi ruang kosong */
@@ -161,6 +230,7 @@
 
 .card-title {
     font-size: 1rem;
+    text-decoration: none;
 }
 
 .card-img-top {
@@ -186,10 +256,12 @@
 }
 
 .carousel-item img {
-    height: 400px;
-    /* Set height untuk gambar carousel */
+    max-width: 100%;
+    /* Batasi gambar agar tidak lebih besar dari lebar container */
+    max-height: 100%;
+    /* Batasi gambar agar tidak lebih besar dari tinggi container */
     object-fit: cover;
-    /* Menjaga agar gambar tidak terdistorsi */
+    /* Potong gambar jika terlalu besar */
 }
 
 button.carousel-control-prev,
@@ -197,6 +269,25 @@ button.carousel-control-next {
     filter: invert(1);
     /* Agar tombol kontrol lebih terlihat di gambar gelap */
 }
+
+.carousel-item {
+    padding: 0;
+    margin: 0;
+    background: no-repeat scroll center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 
 h4,
 h5 {
@@ -223,3 +314,123 @@ select.form-select {
 button {
     margin-top: 20px;
 }
+
+.tittle-katalog h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.tittle-katalog h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+
+
+}
+
+/* ======= start CSS KatalogDetailView.vue ==========*/
+/* Carousel item image styling */
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Indikator gambar mini */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    width: 70px !important;
+    height: auto;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin: 0 5px;
+}
+
+.carousel-indicators li.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.carousel-indicators li:hover {
+    opacity: 0.8;
+}
+
+/* Menambahkan properti untuk memastikan gambar bisa di-zoom */
+.carousel-item img {
+    transition: transform 0.3s ease;
+    /* Menambahkan transisi */
+    object-fit: cover;
+    /* Memastikan gambar tetap terjaga proporsinya */
+    cursor: zoom-in;
+    /* Menampilkan cursor zoom-in */
+    position: relative;
+    /* Pastikan gambar tidak tertutup oleh elemen lain */
+    z-index: 1;
+    /* Memastikan gambar berada di atas */
+}
+
+.carousel-item img:hover {
+    transform: scale(1.2);
+    /* Efek zoom */
+    z-index: 2;
+    /* Gambar naik ke lapisan atas saat di-hover */
+}
+
+/* Tambahkan styling untuk mencegah overflow gambar */
+.carousel-inner {
+    overflow: hidden;
+}
+
+/* style untuk size */
+.tittle-katalog ul {
+    padding-top: 20px;
+}
+
+.tittle-katalog li {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    padding: 10px 3rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tittle-katalog li:hover {
+    background-color: #dcdcdc;
+}
+
+.tittle-katalog .active-size {
+    border: 2px solid #387478;
+    background-color: #e7f1ff;
+}
+
+.tittle-size {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #387478;
+}
+
+/* style untuk dropdown quantity */
+.form-select {
+    margin-top: 1rem;
+}
+
+/* ======= end CSS KatalogDetailView.vue ==========*/

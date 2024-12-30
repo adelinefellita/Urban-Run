@@ -1,11 +1,12 @@
 import {
     createRouter,
     createWebHashHistory
-} from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import WomenView from '../views/WomenView.vue'
-import MenView from '../views/MenView.vue'
-import KatalogDetail from '../views/KatalogDetailView.vue'
+} from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import WomenView from '../views/WomenView.vue';
+import MenView from '../views/MenView.vue';
+import KatalogDetailView from '../views/KatalogDetailView.vue';
+import CartView from '../views/1CartView.vue'; // Fixed the import
 
 const routes = [{
         path: '/',
@@ -23,23 +24,26 @@ const routes = [{
         component: WomenView
     },
     {
-        path: '/women/:id',
+        path: '/KatalogDetail/:id',
         name: 'KatalogDetail',
-        component: KatalogDetail
+        component: KatalogDetailView,
+        props: true
+    },
+    {
+        path: '/cart',
+        name: 'CartView',
+        component: CartView
     },
     {
         path: '/about',
         name: 'about',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import( /* webpackChunkName: "about" */ '../views/AboutView.vue')
     }
-]
+];
 
 const router = createRouter({
     history: createWebHashHistory(),
     routes
-})
+});
 
-export default router
+export default router;

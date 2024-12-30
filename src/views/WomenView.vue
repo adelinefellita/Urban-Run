@@ -53,7 +53,7 @@ export default {
         },
         searchShoes() {
             if (this.search.trim() === '') {
-                axios.get('http://localhost:3000/categories/women-shoes')
+                axios.get('http://localhost:3000/women-shoes')
                     .then((response) => {
                         this.setProducts(response.data);
                     })
@@ -61,7 +61,7 @@ export default {
                         console.log("Error fetching all women's shoes:", error);
                     });
             } else {
-                axios.get('http://localhost:3000/categories/women-shoes')
+                axios.get('http://localhost:3000/women-shoes')
                     .then((response) => {
                         const filteredProducts = response.data.filter(product =>
                             product.name.toLowerCase().includes(this.search.toLowerCase())
@@ -75,7 +75,7 @@ export default {
         }
     },
     mounted() {
-        axios.get('http://localhost:3000/categories/women-shoes')
+        axios.get('http://localhost:3000/women-shoes')
             .then((response) => {
                 this.setProducts(response.data);
             })

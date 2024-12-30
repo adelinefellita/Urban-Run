@@ -1,17 +1,23 @@
 <template>
     <div class="hero">
+
         <!-- Carousel Pamflet -->
-        <div id="carouselPamflet" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselPamflet" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+            <!-- Inner Carousel -->
             <div class="carousel-inner">
                 <div v-for="(image, index) in pamfletImages" :key="index"
                     :class="['carousel-item', { active: index === 0 }]">
                     <img :src="`/images/${image}`" class="d-block w-100" alt="Pamflet">
                 </div>
             </div>
+
+            <!-- Previous Button -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselPamflet" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
+
+            <!-- Next Button -->
             <button class="carousel-control-next" type="button" data-bs-target="#carouselPamflet" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
@@ -40,12 +46,11 @@ export default {
     },
     data() {
         return {
-            pamfletImages: ['pamflet1.png', 'pamflet2.png', 'pamflet3.png'], // Nama file pamflet
+            pamfletImages: ['Pamflet1.png', 'Pamflet2.png', 'Pamflet3.png'], // Nama file pamflet
             bestSellers: [] // Produk Best Seller
         };
     },
     mounted() {
-        // Ambil data produk dari db.json (simulasi data fetch)
         const menShoes = [
             {
                 id: 1,
